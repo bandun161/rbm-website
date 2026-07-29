@@ -1,0 +1,355 @@
+Rural Bank of Madridejos (Cebu), Inc. Website Development Prompt
+Project Overview
+
+Design and develop a premium, modern, secure, and fully responsive corporate website for Rural Bank of Madridejos (Cebu), Inc. The design should inspire trust, professionalism, and community partnership while maintaining a clean and elegant banking aesthetic.
+
+The website should be comparable in quality to modern banking websites such as LandBank, BPI, Metrobank, and Security Bank while preserving the identity of a community rural bank.
+
+Brand Identity
+Primary Color
+
+Emerald Green (#16A34A)
+
+Secondary Color
+
+Deep Navy Blue (#0F3D6E)
+
+Background
+
+White (#FFFFFF)
+
+Text
+
+Dark Gray (#374151)
+
+Light Background
+
+#F8FAFC
+
+Accent
+
+Gold (#D4AF37)
+
+Color Distribution
+
+65% White
+20% Green
+15% Blue
+Website Style
+Premium
+Modern
+Minimalist
+Banking Professional
+Elegant
+Spacious Layout
+Soft Shadows
+Rounded Corners
+Glassmorphism where appropriate
+Smooth Scroll Animations
+Fast Loading
+SEO Optimized
+Mobile Responsive
+Accessibility Compliant (WCAG)
+Navigation
+Home
+About Us
+Products & Services
+Board of Directors
+News & Advisories
+Careers
+Contact
+
+Include a sticky navigation bar with hover effects and a responsive mobile menu.
+
+HOME PAGE
+Hero Section
+
+Large full-screen banner featuring imagery that reflects the local community, such as:
+
+Farmers
+Fishermen
+Small Businesses
+Families
+Rural landscapes
+Banking professionals assisting customers
+Headline
+
+Banking with Integrity. Growing Communities Since 1982.
+
+Subheadline
+
+For over four decades, Rural Bank of Madridejos (Cebu), Inc. has proudly served the people of Madridejos by providing trusted financial services, responsible banking solutions, and unwavering commitment to community development.
+
+Buttons
+
+Open an Account
+Learn More
+About Preview
+Our Story
+
+Rural Bank of Madridejos (Cebu), Inc. is a Philippine banking corporation established under the laws of the Republic of the Philippines. The Bank was registered with the Securities and Exchange Commission on July 12, 1982, and was granted a Certificate of Authority by the Central Bank of the Philippines (now the Bangko Sentral ng Pilipinas) on March 18, 1982, authorizing it to operate as a rural bank.
+
+Since opening its doors, the Bank has remained committed to promoting financial inclusion, supporting local businesses, and contributing to the economic growth of the Madridejos community through safe, reliable, and customer-focused banking services.
+
+Include a Read More button.
+
+Why Choose Us
+
+Four feature cards with icons:
+
+Over 40 Years of Banking Experience
+
+Serving the Madridejos community since 1982.
+
+BSP Supervised
+
+Operating under the supervision of the Bangko Sentral ng Pilipinas.
+
+Community-Focused Banking
+
+Supporting farmers, entrepreneurs, families, and local businesses.
+
+Trusted Financial Partner
+
+Committed to integrity, transparency, and responsible banking.
+
+Products & Services
+
+Display modern service cards for:
+
+Savings Deposit
+Time Deposit
+Agricultural Loans
+Commercial Loans
+Salary Loans
+Remittance Services
+
+Each card includes:
+
+Icon
+Short description
+Learn More button
+Corporate Timeline
+
+1982
+
+Certificate of Authority granted by the Central Bank of the Philippines.
+
+October 8, 1982
+
+Commenced operations as Rural Bank of Madridejos (Cebu), Inc.
+
+Today
+
+Continuing more than four decades of trusted community banking.
+
+Mission
+
+To provide accessible, reliable, and innovative banking services that promote financial inclusion and contribute to the sustainable economic development of the communities we serve.
+
+Vision
+
+To be the most trusted rural bank in Northern Cebu by delivering excellent financial services, fostering community growth, and creating lasting value for our customers and stakeholders.
+
+Core Values
+Integrity
+Service Excellence
+Accountability
+Transparency
+Innovation
+Community Partnership
+ABOUT PAGE
+Corporate Profile
+Corporate Name
+
+Rural Bank of Madridejos (Cebu), Inc.
+
+Principal Office
+
+JD Villacarlos Street
+
+Poblacion
+
+Madridejos
+
+Cebu
+
+Email
+
+rbmlawis82@yahoo.com
+
+Corporate History
+
+Rewrite the following information into professional corporate language while preserving its legal accuracy:
+
+Registered with the Securities and Exchange Commission on July 12, 1982.
+Certificate of Authority granted by the Central Bank of the Philippines on March 18, 1982 under Republic Act No. 720, as amended.
+Corporate existence extended for another fifty (50) years.
+The Bank is owned by responsible shareholders committed to sound banking principles, ethical governance, and community development.
+The Bank recognizes its social responsibility to depositors, borrowers, and the communities it serves.
+
+Include a professionally designed timeline with icons.
+
+BOARD OF DIRECTORS
+
+Create elegant executive profile cards.
+
+Each card should contain:
+
+Professional portrait placeholder
+Name
+Position
+Appointment Date
+Members
+
+Frederick F. Salazar
+
+Director
+
+Appointment Date
+
+April 1, 2025
+
+Warlito D. Pasasadaba
+
+Acting Chairman
+
+Appointment Date
+
+April 1, 2025
+
+Sisenia B. Chin
+
+Director
+
+Appointment Date
+
+April 1, 2025
+
+Johan Ustin F. Sisno
+
+Independent Director
+
+Appointment Date
+
+April 1, 2025
+
+Joanna Angelita F. Salazar
+
+Board Secretary
+
+Appointment Date
+
+April 1, 2025
+
+PRODUCTS & SERVICES
+
+Create individual pages for:
+
+Savings Deposit
+Time Deposit
+Agricultural Loans
+Commercial Loans
+Salary Loans
+Remittance Services
+
+Each page should contain:
+
+Overview
+Features
+Benefits
+Eligibility Requirements
+Frequently Asked Questions
+Call-to-Action button
+CONTACT PAGE
+
+Display:
+
+Office Address
+
+JD Villacarlos Street
+
+Poblacion
+
+Madridejos, Cebu
+
+Email
+
+rbmlawis82@yahoo.com
+
+Contact Form
+
+Fields:
+
+Full Name
+Email Address
+Phone Number
+Subject
+Message
+
+Include Google Maps integration showing the bank's location.
+
+FOOTER
+
+Include:
+
+Quick Links
+Products & Services
+Contact Information
+BSP Consumer Protection
+PDIC Information
+Privacy Policy
+Terms of Use
+Careers
+Annual Reports
+Facebook (placeholder)
+Copyright
+
+© 2026 Rural Bank of Madridejos (Cebu), Inc. All Rights Reserved.
+
+Animations
+Fade-in on scroll
+Slide-up sections
+Animated counters
+Button hover effects
+Smooth page transitions
+Sticky navigation
+Back-to-top button
+Technical Stack
+
+Use:
+
+React 19
+Next.js
+TypeScript
+Tailwind CSS
+Framer Motion
+Lucide Icons
+
+The website must be:
+
+Fully responsive
+SEO optimized
+Accessible (WCAG)
+Production-ready
+Fast-loading
+Semantic HTML
+Optimized for Core Web Vitals
+Additional Features
+
+Include placeholder pages or sections for:
+
+Online Banking Login (future integration)
+Loan Calculator
+Savings Calculator
+Downloadable Forms
+Annual Reports
+Financial Statements
+News & Advisories
+Financial Literacy Resources
+Careers
+Frequently Asked Questions
+Business Hours
+Emergency Contact Numbers
+
+Overall Objective: Create a modern, trustworthy, and community-centered website that reflects the values of Rural Bank of Madridejos (Cebu), Inc. while presenting it as a forward-looking financial institution. The design should emphasize security, professionalism, accessibility, and service to the local community, with branding centered on the bank's green logo complemented by navy blue and white.

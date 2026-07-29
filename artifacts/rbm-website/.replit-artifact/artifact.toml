@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Rural Bank of Madridejos Website"
+version = "1.0.0"
+id = "artifacts/rbm-website"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18876
+
+[services.development]
+run = "pnpm --filter @workspace/rbm-website run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/rbm-website", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/rbm-website/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18876"
+BASE_PATH = "/"
