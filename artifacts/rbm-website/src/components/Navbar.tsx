@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "./ui/button";
 import { Menu, X, ChevronDown, Landmark, ArrowRight, ShieldCheck, PieChart, Users, DollarSign } from "lucide-react";
 import { cn } from "@/lib/utils";
+import rbmLogo from "@assets/Screenshot_2026-05-28_092603_1785304319721.png";
 
 const NavLink = ({ href, children, isActive, onClick }: { href: string; children: React.ReactNode; isActive: boolean; onClick?: () => void }) => (
   <Link href={href} onClick={onClick} className={cn(
@@ -44,9 +45,11 @@ export function Navbar() {
     )}>
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-            <Landmark className="text-white h-6 w-6" />
-          </div>
+          <img
+            src={rbmLogo}
+            alt="Rural Bank of Madridejos (Cebu), Inc. Logo"
+            className="h-12 w-12 object-contain group-hover:scale-105 transition-transform flex-shrink-0"
+          />
           <div className="flex flex-col">
             <span className="font-serif font-bold text-secondary text-lg leading-tight tracking-tight">RURAL BANK OF MADRIDEJOS</span>
             <span className="text-xs text-primary font-semibold uppercase tracking-wider">(CEBU), INC.</span>

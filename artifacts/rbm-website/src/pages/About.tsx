@@ -3,7 +3,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
 import { Reveal } from "@/components/Reveal";
-import branchInterior from "@assets/generated_images/branch-interior.jpg";
+import branchInterior from "@assets/1000003118_1785304506090.jpg";
 import { Building2, Calendar, Target, Award, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 

@@ -1,5 +1,6 @@
 import { Link } from "wouter";
-import { Landmark, MapPin, Phone, Mail, Clock, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Facebook } from "lucide-react";
+import rbmLogo from "@assets/Screenshot_2026-05-28_092603_1785304319721.png";
 
 export function Footer() {
   return (
@@ -9,9 +10,11 @@ export function Footer() {
           {/* Brand Col */}
           <div>
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center shadow-lg">
-                <Landmark className="text-white h-6 w-6" />
-              </div>
+              <img
+                src={rbmLogo}
+                alt="Rural Bank of Madridejos (Cebu), Inc. Logo"
+                className="h-12 w-12 object-contain flex-shrink-0 brightness-0 invert"
+              />
               <div className="flex flex-col">
                 <span className="font-serif font-bold text-white text-lg leading-tight tracking-tight">RURAL BANK OF MADRIDEJOS</span>
                 <span className="text-xs text-primary font-semibold uppercase tracking-wider">(CEBU), INC.</span>
