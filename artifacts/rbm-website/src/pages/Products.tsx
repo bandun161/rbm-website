@@ -21,7 +21,7 @@ const products = [
     icon: ShieldCheck, 
     title: "Savings Deposit", 
     desc: "Secure your future with our accessible savings accounts.",
-    features: ["No maintaining balance", "Passbook issuance", "PDIC insured up to PHP 500,000", "Earns interest"]
+    features: ["No maintaining balance", "Passbook issuance", "PDIC insured up to PHP 1,000,000", "Earns interest"]
   },
   { 
     id: "time-deposit",

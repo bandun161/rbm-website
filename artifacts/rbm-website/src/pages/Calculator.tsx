@@ -19,13 +19,13 @@ export default function Calculator() {
   // Loan State
   const [loanAmount, setLoanAmount] = useState<number>(100000);
   const [loanTerm, setLoanTerm] = useState<number>(12); // months
-  const [loanRate, setLoanRate] = useState<number>(1.5); // % per month
+  const [loanRate, setLoanRate] = useState<number>(1.83); // % per month
 
   // Savings State
   const [initialDeposit, setInitialDeposit] = useState<number>(10000);
   const [monthlyDeposit, setMonthlyDeposit] = useState<number>(2000);
   const [savingsTerm, setSavingsTerm] = useState<number>(5); // years
-  const [savingsRate, setSavingsRate] = useState<number>(4.5); // % per annum
+  const [savingsRate, setSavingsRate] = useState<number>(2.00); // % per annum
 
   // Calculations
   const monthlyLoanPayment = (loanAmount * (1 + (loanRate/100) * loanTerm)) / loanTerm;

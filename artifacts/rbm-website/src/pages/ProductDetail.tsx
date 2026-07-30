@@ -33,7 +33,7 @@ const productData = {
       "No maintaining balance required",
       "Passbook issuance for easy tracking",
       "Competitive interest rates",
-      "Insured by PDIC up to PHP 500,000",
+      "Insured by PDIC up to PHP 1,000,000",
       "Easy deposit and withdrawal process"
     ],
     benefits: "Enjoy peace of mind knowing your hard-earned money is secure. With no maintaining balance, it's perfect for first-time savers and everyday transactions.",
@@ -46,7 +46,7 @@ const productData = {
     faqs: [
       { q: "Is there a maintaining balance?", a: "No, our regular savings account does not require a maintaining balance." },
       { q: "How much is the initial deposit?", a: "Please visit our branch or contact us for the current initial deposit requirement." },
-      { q: "Is my deposit insured?", a: "Yes, all deposit accounts are insured by the Philippine Deposit Insurance Corporation (PDIC) up to PHP 500,000 per depositor." }
+      { q: "Is my deposit insured?", a: "Yes, all deposit accounts are insured by the Philippine Deposit Insurance Corporation (PDIC) up to PHP 1,000,000 per depositor." }
     ]
   },
   "time-deposit": {

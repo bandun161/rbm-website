@@ -133,11 +133,11 @@ export default function About() {
               <Reveal delay={0.3}>
                 <div className="relative md:flex items-center justify-between w-full">
                   <div className="hidden md:block w-5/12 text-right pr-8">
-                    <h3 className="text-2xl font-bold text-primary">October 8, 1982</h3>
+                    <h3 className="text-2xl font-bold text-primary">October 10, 1982</h3>
                   </div>
                   <div className="absolute -left-[41px] md:left-1/2 md:-translate-x-1/2 w-5 h-5 rounded-full bg-primary border-4 border-white shadow"></div>
                   <div className="md:w-5/12 md:pl-8">
-                    <div className="md:hidden text-primary font-bold mb-2">October 8, 1982</div>
+                    <div className="md:hidden text-primary font-bold mb-2">October 10, 1982</div>
                     <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                       <h4 className="font-bold text-secondary mb-2">Operations Commenced</h4>
                       <p className="text-gray-600 text-sm">Officially opened doors as Rural Bank of Madridejos (Cebu), Inc.</p>

@@ -40,6 +40,13 @@ const boardMembers = [
     initials: "JA",
     color: "bg-[#0F3D6E]",
   },
+  {
+    name: "Violeta B. Villaceran",
+    position: "Director",
+    appointed: "April 1, 2026",
+    initials: "VV",
+    color: "bg-[#16A34A]",
+  },
 ];
 
 function AvatarPlaceholder({ initials, color }: { initials: string; color: string }) {

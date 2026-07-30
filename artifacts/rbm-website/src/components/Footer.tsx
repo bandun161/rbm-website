@@ -91,7 +91,7 @@ export function Footer() {
             </div>
             <div className="text-xs text-gray-400 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] inline-block"></span>
-              Deposits are insured by PDIC up to PHP 500,000 per depositor
+              Deposits are insured by PDIC up to PHP 1,000,000 per depositor
             </div>
           </div>
         </div>
