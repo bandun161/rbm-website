@@ -159,17 +159,20 @@ const productData = {
       "Wide partner network across the Philippines",
       "Safe and reliable transaction tracking",
       "Competitive and transparent fees",
-      "Instant payout at our branch"
+      "Instant payout at our branch",
+      "POS withdrawals available"
     ],
-    benefits: "No need to travel far. Receive your remittances right here in Madridejos safely and conveniently.",
+    benefits: "No need to travel far. Receive your remittances right here in Madridejos safely and conveniently. You can also make POS withdrawals directly at our branch.",
     eligibility: [
       "Valid Government ID of the sender/receiver",
-      "Reference Number for claiming"
+      "Reference Number for claiming",
+      "Deposit account (for POS withdrawals)"
     ],
     faqs: [
       { q: "What remittance partners do you have?", a: "Please visit our branch for the updated list of our domestic remittance partners." },
       { q: "How fast can I claim the money?", a: "Remittances are usually available for claiming within minutes after the sender completes the transaction." },
-      { q: "What IDs are accepted for claiming?", a: "We accept primary government-issued IDs such as Passport, Driver's License, UMID, Postal ID, and PhilSys ID." }
+      { q: "What IDs are accepted for claiming?", a: "We accept primary government-issued IDs such as Passport, Driver's License, UMID, Postal ID, and PhilSys ID." },
+      { q: "Can I make a POS withdrawal at the branch?", a: "Yes. We offer POS withdrawal services at our branch, allowing you to withdraw cash conveniently using your ATM/debit card." }
     ]
   }
 };

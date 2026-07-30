@@ -56,7 +56,7 @@ const products = [
     icon: Send, 
     title: "Remittance Services", 
     desc: "Safe, fast, and reliable money transfer services.",
-    features: ["Fast domestic transfers", "Partner network", "Competitive fees", "Reliable tracking"]
+    features: ["Fast domestic transfers", "Partner network", "Competitive fees", "Reliable tracking", "POS withdrawals"]
   },
 ];
 
