@@ -7,7 +7,7 @@ import { Reveal } from "@/components/Reveal";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { Link } from "wouter";
 import { Landmark, ShieldCheck, HeartHandshake, Leaf, Shield, BadgeCheck, LeafyGreen, Store, Briefcase, Send, ChevronRight, PieChart, ArrowRight } from "lucide-react";
-import heroBg from "@assets/1000003117_1785304506090.jpg";
+import heroBg from "@assets/generated_images/hero-bg-v2.jpg";
 import branchInterior from "@assets/1000003118_1785304506090.jpg";
 
 export default function Home() {
