@@ -70,11 +70,11 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-primary flex-shrink-0" size={18} />
-                <span className="text-gray-300 text-sm">0917-XXX-XXXX</span>
+                <span className="text-gray-300 text-sm">0920-912-1567</span>
               </li>
               <li className="flex items-center gap-3">
                 <Clock className="text-primary flex-shrink-0" size={18} />
-                <span className="text-gray-300 text-sm">Mon–Fri: 8:00 AM – 5:00 PM</span>
+                <span className="text-gray-300 text-sm">Mon–Fri: 9:00 AM – 5:00 PM</span>
               </li>
             </ul>
           </div>
