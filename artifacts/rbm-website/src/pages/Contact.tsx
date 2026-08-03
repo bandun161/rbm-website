@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Loader2 } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -38,6 +38,7 @@ const formSchema = z.object({
 
 export default function Contact() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     document.title = "Contact Us | Rural Bank of Madridejos";
@@ -56,34 +57,37 @@ export default function Contact() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    const { error } = await supabase.from("account_applications").insert([
-      {
-        name: values.name,
-        email: values.email,
-        phone: values.phone,
-        subject: values.subject,
-        message: values.message,
-      },
-    ]);
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase.from("account_applications").insert([
+        {
+          full_name: values.name,
+          email: values.email,
+          phone_number: values.phone,
+          subject: values.subject,
+          message: values.message,
+        },
+      ]);
 
-    if (error) {
-      console.error("Supabase Error:", error);
+      if (error) throw error;
 
       toast({
-        title: "Submission Failed",
-        description: error.message,
+        title: "Message Sent!",
+        description:
+          "Thank you for contacting us. We will get back to you shortly.",
       });
-
-      return;
+      form.reset();
+    } catch (err) {
+      console.error("Submission error:", err);
+      toast({
+        title: "Submission Failed",
+        description:
+          "Something went wrong. Please try again or contact us directly by phone.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-
-    toast({
-      title: "Message Sent",
-      description:
-        "Thank you for contacting us. We will get back to you shortly.",
-    });
-
-    form.reset();
   }
 
   return (
@@ -95,12 +99,9 @@ export default function Contact() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <Reveal>
-              <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-                Contact Us
-              </h1>
+              <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">Contact Us</h1>
               <p className="text-xl text-blue-100">
-                We're here to help. Reach out to us for inquiries, support, or
-                to learn more about our services.
+                We're here to help. Reach out to us for inquiries, support, or to learn more about our services.
               </p>
             </Reveal>
           </div>
@@ -110,12 +111,11 @@ export default function Contact() {
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+
             {/* Contact Info */}
             <Reveal direction="right">
               <div>
-                <h2 className="text-3xl font-serif font-bold text-secondary mb-8">
-                  Get in Touch
-                </h2>
+                <h2 className="text-3xl font-serif font-bold text-secondary mb-8">Get in Touch</h2>
 
                 <div className="space-y-8 mb-12">
                   <div className="flex items-start gap-4">
@@ -123,14 +123,8 @@ export default function Contact() {
                       <MapPin size={24} />
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-1">
-                        Principal Office
-                      </h4>
-                      <p className="text-gray-600">
-                        JD Villacarlos Street, Poblacion,
-                        <br />
-                        Madridejos, Cebu, Philippines
-                      </p>
+                      <h4 className="font-bold text-gray-900 mb-1">Principal Office</h4>
+                      <p className="text-gray-600">JD Villacarlos Street, Poblacion,<br/>Madridejos, Cebu, Philippines</p>
                     </div>
                   </div>
 
@@ -150,9 +144,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-900 mb-1">Email</h4>
-                      <p className="text-primary font-medium">
-                        rbmlawis82@yahoo.com
-                      </p>
+                      <p className="text-primary font-medium">rbmlawis82@yahoo.com</p>
                     </div>
                   </div>
 
@@ -161,9 +153,7 @@ export default function Contact() {
                       <Clock size={24} />
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-1">
-                        Business Hours
-                      </h4>
+                      <h4 className="font-bold text-gray-900 mb-1">Business Hours</h4>
                       <p className="text-gray-600">Monday – Friday</p>
                       <p className="text-gray-600">9:00 AM – 5:00 PM</p>
                     </div>
@@ -186,29 +176,18 @@ export default function Contact() {
             {/* Form */}
             <Reveal direction="left">
               <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl shadow-gray-200/50 border border-gray-100">
-                <h3 className="text-2xl font-bold text-secondary mb-6">
-                  Send us a Message
-                </h3>
+                <h3 className="text-2xl font-bold text-secondary mb-6">Send us a Message</h3>
 
                 <Form {...form}>
-                  <form
-                    onSubmit={form.handleSubmit(onSubmit)}
-                    className="space-y-6"
-                  >
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <FormField
                       control={form.control}
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-gray-700">
-                            Full Name
-                          </FormLabel>
+                          <FormLabel className="text-gray-700">Full Name</FormLabel>
                           <FormControl>
-                            <Input
-                              placeholder="Juan Dela Cruz"
-                              className="h-12 bg-gray-50 border-gray-200 focus:border-primary focus:ring-primary/20"
-                              {...field}
-                            />
+                            <Input placeholder="Juan Dela Cruz" className="h-12 bg-gray-50 border-gray-200 focus:border-primary focus:ring-primary/20" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -221,16 +200,9 @@ export default function Contact() {
                         name="email"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-gray-700">
-                              Email Address
-                            </FormLabel>
+                            <FormLabel className="text-gray-700">Email Address</FormLabel>
                             <FormControl>
-                              <Input
-                                placeholder="juan@example.com"
-                                type="email"
-                                className="h-12 bg-gray-50 border-gray-200"
-                                {...field}
-                              />
+                              <Input placeholder="juan@example.com" type="email" className="h-12 bg-gray-50 border-gray-200" {...field} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -242,15 +214,9 @@ export default function Contact() {
                         name="phone"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-gray-700">
-                              Phone Number
-                            </FormLabel>
+                            <FormLabel className="text-gray-700">Phone Number</FormLabel>
                             <FormControl>
-                              <Input
-                                placeholder="09XX-XXX-XXXX"
-                                className="h-12 bg-gray-50 border-gray-200"
-                                {...field}
-                              />
+                              <Input placeholder="09XX-XXX-XXXX" className="h-12 bg-gray-50 border-gray-200" {...field} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -263,31 +229,18 @@ export default function Contact() {
                       name="subject"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-gray-700">
-                            Subject
-                          </FormLabel>
-                          <Select
-                            onValueChange={field.onChange}
-                            defaultValue={field.value}
-                          >
+                          <FormLabel className="text-gray-700">Subject</FormLabel>
+                          <Select onValueChange={field.onChange} value={field.value}>
                             <FormControl>
                               <SelectTrigger className="h-12 bg-gray-50 border-gray-200">
                                 <SelectValue placeholder="Select a subject" />
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                              <SelectItem value="general">
-                                General Inquiry
-                              </SelectItem>
-                              <SelectItem value="loan">
-                                Loan Application
-                              </SelectItem>
-                              <SelectItem value="account">
-                                Account Opening
-                              </SelectItem>
-                              <SelectItem value="complaint">
-                                Feedback / Complaint
-                              </SelectItem>
+                              <SelectItem value="general">General Inquiry</SelectItem>
+                              <SelectItem value="loan">Loan Application</SelectItem>
+                              <SelectItem value="account">Account Opening</SelectItem>
+                              <SelectItem value="complaint">Feedback / Complaint</SelectItem>
                               <SelectItem value="other">Other</SelectItem>
                             </SelectContent>
                           </Select>
@@ -301,9 +254,7 @@ export default function Contact() {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-gray-700">
-                            Message
-                          </FormLabel>
+                          <FormLabel className="text-gray-700">Message</FormLabel>
                           <FormControl>
                             <Textarea
                               placeholder="How can we help you?"
@@ -318,14 +269,23 @@ export default function Contact() {
 
                     <Button
                       type="submit"
+                      disabled={isSubmitting}
                       className="w-full h-14 text-base font-bold shadow-lg shadow-primary/20"
                     >
-                      Submit Message
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                          Sending…
+                        </>
+                      ) : (
+                        "Submit Message"
+                      )}
                     </Button>
                   </form>
                 </Form>
               </div>
             </Reveal>
+
           </div>
         </div>
       </section>
