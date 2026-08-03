@@ -61,9 +61,9 @@ export default function Contact() {
     try {
       const { error } = await supabase.from("account_applications").insert([
         {
-          full_name: values.name,
+          name: values.name,
           email: values.email,
-          phone_number: values.phone,
+          phone: values.phone,
           subject: values.subject,
           message: values.message,
         },
