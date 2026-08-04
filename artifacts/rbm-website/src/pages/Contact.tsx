@@ -76,6 +76,27 @@ export default function Contact() {
         description:
           "Thank you for contacting us. We will get back to you shortly.",
       });
+
+      // Invoke Edge Function for email notification — failures are non-blocking
+      const { error: functionError } = await supabase.functions.invoke(
+        "smooth-service",
+        {
+          body: {
+            record: {
+              name: values.name,
+              email: values.email,
+              phone: values.phone,
+              subject: values.subject,
+              message: values.message,
+              created_at: new Date().toISOString(),
+            },
+          },
+        }
+      );
+      if (functionError) {
+        console.error("Edge Function error:", functionError);
+      }
+
       form.reset();
     } catch (err) {
       console.error("Submission error:", err);
